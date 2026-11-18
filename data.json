@@ -1,0 +1,20 @@
+[
+	{
+		"num": 1,
+		"id": "qJoYP6DKLzF73uZrkV9n",
+		"role": "SUPER_ADMIN",
+		"status": "ACTIVE"
+	},
+	{
+		"num": 2,
+		"id": "shgfbrvhgre",
+		"role": "USER",
+		"status": "BANNED"
+	},
+	{
+		"num": 1,
+		"id": "qJoYP6DKLzF73uZrkV9n()",
+		"role": "SUPER_ADMIN",
+		"status": "ACTIVE"
+	}
+]
