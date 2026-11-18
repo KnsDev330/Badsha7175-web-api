@@ -30,13 +30,62 @@ async function loadData() {
 	for(let i=0; i<data.limit; i++) {
 		const product = products[i];
 
-		const DIV = document.createElement("div");
-		DIV.classList = `card card_${i+1}`;
+		const CONTAINER = document.createElement("div");
+		CONTAINER.classList = `card card_${i+1}`;
+		
+		const NAME = document.createElement("div");
+		NAME.classList = `name`;
+		NAME.innerText = product.title;
 
-		DIV.innerText = product.title;
+		const IMG = document.createElement("img");
+		IMG.src = product.thumbnail;
+
+		const PRICE = document.createElement("div");
+		PRICE.classList = "price";
+		PRICE.innerText = `Tk. ${product.price}`;
+
+		const DESC = document.createElement("div");
+		DESC.classList = "description";
+		DESC.innerText = product.description;
+
+		const ORDER = document.createElement('button');
+		ORDER.classList = "order-now";
+		ORDER.innerText = "ORDER NOW";
+
+		ORDER.onclick = function() {
+			ORDER.innerText = "Ordering...";
+			ORDER.classList.toggle("ordering");
+			ORDER.disabled = true;
+			console.log('ordering...')
+
+			setTimeout(
+				function(){
+					ORDER.innerText = "ORDER NOW";
+					ORDER.classList.toggle("ordering");
+					ORDER.disabled = false;
+				},
+				2000
+			);
+		}
+
+		const BR = document.createElement('br');
 
 
-		phonesContainer.appendChild(DIV);
+		const LINK = document.createElement('a');
+		LINK.href = "details.html";
+		LINK.innerText = "Details";
+
+		CONTAINER.appendChild(IMG);
+		CONTAINER.appendChild(NAME);
+		CONTAINER.appendChild(PRICE);
+		CONTAINER.appendChild(DESC);
+		CONTAINER.appendChild(ORDER);
+		CONTAINER.appendChild(BR);
+		CONTAINER.appendChild(LINK);
+		
+
+
+		phonesContainer.appendChild(CONTAINER);
 	}
 
 };

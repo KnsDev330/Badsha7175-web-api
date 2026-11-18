@@ -33,6 +33,30 @@ body {
   transition: background 0.3s;
 }
 
+.description {
+  color: gray;
+  margin: 10px auto;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-now {
+  background: green;
+  color: white;
+  font-size: 18px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.order-now.ordering {
+  background: gray;
+  cursor: not-allowed;
+}
+
 .btn-primary:hover {
   background-color: #0b5ed7;
 }
